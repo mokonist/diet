@@ -1,0 +1,31 @@
+name: Open daily eat report issue
+on:
+  schedule:
+    - cron: '0 23 * * *'
+
+jobs:
+  create_new_issue:
+    name: Open daily eat report issues.
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Set date
+        run: echo YYYYMMDD=`date +%Y/%m/%d` >> $GITHUB_ENV
+      - name: Create new eat report issue
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          labels: "Eat Report"
+          title: "${{ env.YYYYMMDD }} 食事レポート"
+          body: |
+            |name|kcal|
+            |-----|---|
+            |昼ご飯|kcal|
+            |夜ご飯|kcal|
+            |total|kcal|
+
+            ref: #
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
