@@ -27,5 +27,8 @@ jobs:
             ref: #
           pinned: false
           close-previous: false
+          assignees: "mokocm"
+          project: 1  
+          column: "WIP"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
