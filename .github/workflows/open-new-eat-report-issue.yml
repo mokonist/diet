@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Set date
         run: echo YYYYMMDD=`date +%Y/%m/%d` >> $GITHUB_ENV
+        env:
+          TZ: Asia/Tokyo
       - name: Create new eat report issue
         uses: imjohnbo/issue-bot@v3
         with:
