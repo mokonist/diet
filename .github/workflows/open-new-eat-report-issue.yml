@@ -1,7 +1,7 @@
 name: Open daily eat report issue
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: "0 23 * * *"
 
 jobs:
   create_new_issue:
@@ -30,7 +30,7 @@ jobs:
           pinned: false
           close-previous: false
           assignees: "mokocm"
-          project: 1  
+          project: 1
           column: "WIP"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
