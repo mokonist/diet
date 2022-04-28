@@ -1,7 +1,7 @@
 name: Open daily eat report issue
 on:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 21 * * *"
 
 jobs:
   create_new_issue:
