@@ -15,4 +15,3 @@ title: "SPxスクラムイベント"
 なぜできなかったかはプランニングで原因究明して、やってできたこと・わかったこと・次トライしてみることがわかるようにしたい。
 
 # スクラムイベントのプチ振り返り
-diff --git a/.github/ISSUE_TEMPLATE/refinement.md b/.github/ISSUE_TEMPLATE/refinement.md
